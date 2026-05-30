@@ -35,11 +35,11 @@
 </template>
 
 <script>
-import MetricStrip from '/src/components/MetricStrip.vue';
-import CaseOpsView from '/src/components/CaseOpsView.vue';
-import BattlecardView from '/src/components/BattlecardView.vue';
-import EvidenceView from '/src/components/EvidenceView.vue';
-import AutomationView from '/src/components/AutomationView.vue';
+import MetricStrip from './components/MetricStrip.vue';
+import CaseOpsView from './components/CaseOpsView.vue';
+import BattlecardView from './components/BattlecardView.vue';
+import EvidenceView from './components/EvidenceView.vue';
+import AutomationView from './components/AutomationView.vue';
 
 export default {
   components: {

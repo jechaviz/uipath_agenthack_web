@@ -1,6 +1,6 @@
 window.agenticIncidentOpsData = {
   product: 'Agentic Incident Ops',
-  version: '1.0.0',
+  version: '1.1.0',
   prod: 83,
   deadline: '2026-06-29 11:45 PM PDT',
   track: 'UiPath Maestro Case',

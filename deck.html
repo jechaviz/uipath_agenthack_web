@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Incident Ops Deck</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #16202b;
+        --muted: #657483;
+        --line: #dce5eb;
+        --blue: #155ea6;
+        --green: #1e7a56;
+        --red: #b42318;
+        --page: #f5f8fa;
+        --surface: #ffffff;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        background: var(--page);
+        color: var(--ink);
+        font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+        margin: 0;
+      }
+
+      main {
+        margin: 0 auto;
+        max-width: 1120px;
+        padding: 24px;
+      }
+
+      section {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-bottom: 18px;
+        min-height: 520px;
+        padding: 44px;
+      }
+
+      .eyebrow {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(42px, 8vw, 82px);
+        line-height: 0.98;
+        margin: 10px 0 18px;
+      }
+
+      h2 {
+        font-size: clamp(30px, 5vw, 52px);
+        margin: 0 0 18px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 24px;
+        line-height: 1.35;
+      }
+
+      ul,
+      ol {
+        display: grid;
+        gap: 14px;
+        margin-top: 24px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .metric {
+        color: var(--blue);
+        display: block;
+        font-size: 42px;
+        font-weight: 900;
+      }
+
+      @media (max-width: 760px) {
+        section { min-height: auto; padding: 24px; }
+        .grid { grid-template-columns: 1fr; }
+        p, li { font-size: 19px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <p class="eyebrow">UiPath AgentHack · Maestro Case</p>
+        <h1>Agentic Incident Ops</h1>
+        <p>Governed agents for auditable production incident response.</p>
+      </section>
+
+      <section>
+        <h2>The Problem</h2>
+        <p>Incidents happen across alerts, tickets, dashboards, chat, runbooks, approvals, and postmortems. Teams need speed without losing control.</p>
+      </section>
+
+      <section>
+        <h2>The Solution</h2>
+        <ul>
+          <li>UiPath Maestro Case owns state, exceptions, and approvals.</li>
+          <li>Agents classify, reason, draft, and explain confidence.</li>
+          <li>Robots and API Workflows execute approved runbooks.</li>
+          <li>Every action writes an evidence receipt.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Workflow</h2>
+        <ol>
+          <li>Incident intake</li>
+          <li>Evidence collection</li>
+          <li>Root-cause analysis</li>
+          <li>Human remediation approval</li>
+          <li>Robot/API execution</li>
+          <li>Stakeholder communications</li>
+          <li>Closure and postmortem</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Impact</h2>
+        <div class="grid">
+          <div class="card"><span class="metric">30%</span><p>Target MTTA reduction</p></div>
+          <div class="card"><span class="metric">20%</span><p>Target MTTR reduction</p></div>
+          <div class="card"><span class="metric">100%</span><p>Approval receipts for risky actions</p></div>
+          <div class="card"><span class="metric">100%</span><p>Postmortem packet coverage</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Why It Wins</h2>
+        <p>It is not a chatbot pasted onto operations. It is a governed operating model where UiPath coordinates agents, humans, APIs, robots, and receipts.</p>
+      </section>
+    </main>
+  </body>
+</html>
