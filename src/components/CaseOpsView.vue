@@ -26,10 +26,12 @@
     </section>
 
     <aside class="story-panel">
-      <p class="eyebrow">Why it wins</p>
-      <ul>
-        <li v-for="line in data.story" :key="line">{{ line }}</li>
-      </ul>
+      <p class="eyebrow">Receipt</p>
+      <pre>{{ receiptJson }}</pre>
+      <div class="button-stack">
+        <button class="primary" type="button" @click="approve">Approve</button>
+        <button type="button" @click="exportReceipt">Export</button>
+      </div>
     </aside>
   </section>
 </template>
@@ -43,7 +45,20 @@ export default {
     },
   },
   data() {
-    return { active: 3 };
+    return {
+      active: 3,
+      approved: false,
+    };
+  },
+  computed: {
+    receiptJson() {
+      return JSON.stringify({
+        ...this.data.receipt,
+        approval_status: this.approved ? 'approved' : 'pending',
+        receipt_status: this.approved ? 'ready' : 'draft',
+        generated_at: new Date().toISOString(),
+      }, null, 2);
+    },
   },
   methods: {
     advance() {
@@ -53,6 +68,19 @@ export default {
       if (index < this.active) return 'done';
       if (index === this.active) return step.status === 'gate' ? 'gate' : 'active';
       return 'ready';
+    },
+    approve() {
+      this.approved = true;
+      if (this.active < 4) this.active = 4;
+    },
+    exportReceipt() {
+      const blob = new Blob([this.receiptJson], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'agentic-incident-ops-receipt.json';
+      link.click();
+      URL.revokeObjectURL(url);
     },
   },
 };

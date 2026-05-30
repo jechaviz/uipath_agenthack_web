@@ -1,6 +1,6 @@
 window.agenticIncidentOpsData = {
   product: 'Agentic Incident Ops',
-  version: '0.3.0',
+  version: '0.4.0',
   prod: 83,
   deadline: '2026-06-29 11:45 PM PDT',
   track: 'UiPath Maestro Case',
@@ -17,6 +17,15 @@ window.agenticIncidentOpsData = {
     severity: 'SEV-2',
     impact: '$18.6k at risk',
     current: 'Approval gate ready',
+  },
+  receipt: {
+    case_id: 'INC-2026-0529-API',
+    service: 'Checkout API',
+    severity: 'SEV-2',
+    orchestration: 'UiPath Maestro Case',
+    recommendation: 'Rollback checkout.retryPolicy.v2',
+    approval_status: 'pending',
+    receipt_status: 'draft',
   },
   timeline: [
     { actor: 'Agent', title: 'Normalize incident intake', status: 'done', confidence: 72 },
